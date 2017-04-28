@@ -1,0 +1,21 @@
+<h1>Photo View</h1>
+
+<p type="img">
+  <%= @the_caption %>
+</p>
+
+<img src="<%= @the_image_url %>">
+<p>
+  <%= time_ago_in_words(@created_at) %>
+</p>
+
+<a href="/photos">
+  Go back
+</a>
+
+<a href="/photos/:the_id/edit">
+  Edit
+</a>
+<a href="#">
+  Delete
+</a>

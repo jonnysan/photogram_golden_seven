@@ -1,0 +1,32 @@
+<h1>All Photos</h1>
+
+<a href="/photos/new">Add a new photo</a>
+
+<% @all_photos.each do |the_photo|%>
+<div class="thumbnail">
+<img src="<%= the_photo.source%>">
+<%= time_ago_in_words(the_photo.created_at) %>
+
+ <a class="btn btn-default btn-block" href="/photos/<%=the_photo.id%>">Show Details</a>
+ <a class="btn btn-default btn-block" href="/photos/<%=the_photo.id %>/edit">Edit</a>
+ <a class="btn btn-default btn-block">Delete</a>
+</div>
+<% end %>
+<!--
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg/640px-Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg">
+
+<a href="/photos/<%=@idnum%>">Show Details</a>
+<a>Edit</a>
+<a>Delete</a>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg/640px-Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg">
+
+<a>Show Details</a>
+<a>Edit</a>
+<a>Delete</a>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg/640px-Tracy_Caldwell_Dyson_in_Cupola_ISS.jpg">
+
+<a>Show Details</a>
+<a>Edit</a>
+<a>Delete</a> -->
